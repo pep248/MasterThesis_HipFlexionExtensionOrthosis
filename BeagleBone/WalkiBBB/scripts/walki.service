@@ -1,0 +1,10 @@
+[Unit]
+Description=Keeps the Walki controller running.
+After=syslog.target network.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/root/WalkiSoftware/BeagleBone/scripts/walki_keep_running.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -14,7 +14,7 @@ This can be achieved following the next steps:
 3) Open "Tools > Preferences" sub-menu.
 
 <p align="center">
-<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/master/scone_tools.png">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/main/scone_tools.png">
 </p>
 
 4) In the "SCONE Scenarios" field, set the "Scone Sotware" directory of our recently downloaded repository:

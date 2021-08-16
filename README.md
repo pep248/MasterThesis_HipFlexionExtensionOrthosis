@@ -12,15 +12,19 @@ This can be achieved following the next steps:
 1) Downloading this repository.
 2) Open SCONE Software.
 3) Open "Tools > Preferences" sub-menu.
+
 <p align="center">
-<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/master/scone_tools.png">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/scone_tools.png">
 </p>
+
 4) In the "SCONE Scenarios" field, set the "Scone Sotware" directory of our recently downloaded repository:
 "...\MasterThesis_HipFlexionExtensionOrthosis\SCONE Software".
+
 5) In the "Optimization results" field, set the "Scone Sotware\results" directory of our recently downloaded repository:
 "...\MasterThesis_HipFlexionExtensionOrthosis\SCONE Software\results".
+
 <p align="center">
-<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/master/SCONE_config.png">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/scone_config.png">
 </p>
 
 

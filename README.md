@@ -1,12 +1,28 @@
 # Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis
-
-## Prerequistes
 This repo compiles all the files obtained in the realisation of the Master Thesis project "Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis".
 
-These files include 
+## Prerequistes
 This repo assumes the user is on a Windows system and has Scone Software installed on their machine.
 
 To install SCONE Software follow the instructions [here](https://scone.software/doku.php).
+
+In order to evaluate the provided simulations, we have to properly define the SCONE Software working directory.
+This can be achieved following the next steps:
+
+1) Downloading this repository.
+2) Open SCONE Software.
+3) Open "Tools > Preferences" sub-menu.
+<p align="center">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/master/scone_tools.png">
+</p>
+4) In the "SCONE Scenarios" field, set the "Scone Sotware" directory of our recently downloaded repository:
+"...\MasterThesis_HipFlexionExtensionOrthosis\SCONE Software".
+5) In the "Optimization results" field, set the "Scone Sotware\results" directory of our recently downloaded repository:
+"...\MasterThesis_HipFlexionExtensionOrthosis\SCONE Software\results".
+<p align="center">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/master/SCONE_config.png">
+</p>
+
 
 ## Tutorial Files
 You can follow the tutorial [here](doc/ROS2_Tutorial.pdf).

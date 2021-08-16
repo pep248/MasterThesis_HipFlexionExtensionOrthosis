@@ -1,0 +1,162 @@
+CmaOptimizer {
+	signature_prefix = DATE_TIME
+	
+	# initial parameeters
+	init_file = parameters/good_parameters.par
+	
+	use_init_file = true
+	use_init_file_std = true
+	max_generations = 3000
+	
+	SimulationObjective {
+		# simulation duration in seconds
+		max_duration = 20
+		
+		# Model used in simulation
+		ModelOpenSim3 {
+			# Model file path
+			model_file = models/Geyer_2010.osim
+			
+			# Optimize initial state parameters
+			state_init_file = states/good_state.sto
+			
+			initial_state_offset =	0~0.01<-0.5,0.5>
+			initial_state_offset_exclude = "*_tx;*_ty;*_u"
+			
+			# disable/enable supporting force
+			#Properties {
+				#support {isDisabled = true}
+				#}
+		}
+		
+		# We need two controllers, one for the reflexes and one for the assitive actuators:
+		CompositeController {			
+			# Reflex controller for gait, based on [Geyer & Herr 2010]
+			<< controllers/Geyer_2010_full.scone >>
+			
+			# Controller for the assistive actuators
+			ScriptController {
+				# Name and path
+				name = HipActuator
+				script_file = "controllers/hip_actuator_controller.lua"
+				# Parameters:
+				# User weight including the orthosis
+				body_mass = 75
+				# Fourier variables
+				a1 =	0.4314~0.01<0,1>
+				b1 =	3.1417
+				c1 =	-1.8151~0.01<-2.5,-1>
+				a2 =	0.0932~0.01<-0.5,0.5>
+				b2 =	9.4295
+				c2 =	-2.0574~0.01<-2.5,-1.5>
+				a3 =	0.0725~0.01<-0.5,0.5>
+				b3 =	6.2821
+				c3 =	2.5740~0.01<2,3>
+				# Time between we etect the first step and we apply the actuator torque
+				time_offset = 0.2~<-1.5,1.5>
+				# Initial phase of the torque wave in degrees
+				angle_phase = 0
+				# Multiplier between the mathematical wave and the troque applied by the actuator
+				torque_multiplier = ~1<0.1,10>	
+				# Feedback loop constant
+				control_ratio = ~0.5<0,1>
+			}
+		}
+		
+		# Definition of the goals/measurements
+		CompositeMeasure {
+			# Measure for gait
+			<< measures/gait_measure.scone >>
+			
+			
+			# Measure to minimise the motor torques
+			ScriptMeasure {
+				name = HipActuatorMeasure
+				minimize = 1
+				weight = 0.1#~<0,1> #make it smaller 0.1
+				
+				script_file = "measures/hip_actuator_measure.lua"
+			}
+			
+			# Measure to reward walking for a long distance
+			ScriptMeasure {
+				name = BodyMove
+				minimize = 1
+				weight = 200#~<0,30>#4 10
+				
+				script_file = "measures/torso_measure.lua"
+			}
+			
+			# Measure to try to make both steps have the same duration
+			ScriptMeasure {
+				name = TimeControl
+				minimize = 1
+				weight = 1#~<1,20>0.1
+				
+				script_file = "measures/time_measure.lua"
+			}
+			
+			# Measure to punish the simulation for landing with the toe
+			ScriptMeasure {
+				name = HeelToe
+				minimize = 1
+				weight = 20#~<0,100>20
+				
+				script_file = "measures/foot_measure.lua"
+			}
+			
+			# Measure to check angle by angle that both legs perform the same movements
+			ScriptMeasure {
+				name = AngleControl
+				minimize = 1
+				weight = 0.004#~<0,100>0.0004
+				
+				script_file = "measures/angle_measure.lua"
+			}
+			
+			# Measure to make the simulation last as much as possible
+			ScriptMeasure {
+				name = TimeMaxControl
+				minimize = 1
+				weight = 20#~<0,10>0.2
+				
+				script_file = "measures/time_max_measure.lua"
+			}
+			
+			# Measure to have as many steps as possible
+			ScriptMeasure {
+				name = StepCounter
+				minimize = 1
+				weight = 10 #~<0,30> #4
+				
+				script_file = "measures/step_counter_measure.lua"
+			}
+			
+			# Measure to make the steps of the righ leg be as long as the left ones
+			ScriptMeasure {
+				name = StepLength
+				minimize = 1
+				weight = 0.6#~<0,30> #0.03
+				
+				script_file = "measures/step_length_measure.lua"
+			}
+			
+			# Measure to keep the back straight
+			DofMeasure {
+				dof = pelvis_tilt
+				minimize = 1
+				weight = 5#~<0,10>0.05
+				position { min = -5 max = +5 abs_penalty = +1 }
+			}
+			
+			# Measure to keep the body at a certain altitude
+			ScriptMeasure {
+				name = MuscleMin
+				minimize = 1
+				weight = 10#~<0,30> #0.1
+				
+				script_file = "measures/muscle_measure.lua"
+			}
+		}
+	}
+}

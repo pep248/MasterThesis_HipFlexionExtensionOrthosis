@@ -1,10 +1,11 @@
-# Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis
-This repo compiles a set of usefull files obtained in the realisation of the Master Thesis project "Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis".
+# SCONE Software
+This folder realates to the files regarding the simulator and the tests performed with it. It includes a folder with simulation results along with some MATLAB Scripts to evaluate them.  
 
 ## Prerequistes
-This repo assumes the user is on a Windows system and has Scone Software installed on their machine.
+This repo assumes the user is on a Windows system and has OpenSim Software and Scone Software installed on his/her machine.
 
-To install SCONE Software follow the instructions [here](https://scone.software/doku.php).
+To install OpenSim Software follow the instructions here: [OpenSim](https://simtk.org/frs/index.php?group_id=91).
+To install SCONE Software follow the instructions here: [SCONE](https://scone.software/doku.php).
 
 In order to evaluate the provided simulations, we have to properly define the SCONE Software working directory.
 This can be achieved following the next steps:
@@ -14,7 +15,7 @@ This can be achieved following the next steps:
 3) Open "Tools > Preferences" sub-menu.
 
 <p align="center">
-<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/scone_tools.png">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/SCONE%20Software/scone_tools.png">
 </p>
 
 4) In the "SCONE Scenarios" field, set the "Scone Sotware" directory of our recently downloaded repository:
@@ -24,65 +25,15 @@ This can be achieved following the next steps:
 "...\MasterThesis_HipFlexionExtensionOrthosis\SCONE Software\results".
 
 <p align="center">
-<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/scone_config.png">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/SCONE%20Software/scone_config.png">
 </p>
 
 
-## Tutorial Files
-You can follow the tutorial [here](doc/ROS2_Tutorial.pdf).
-
-## Installation
-
-Clone the repo:
-
-```bash
-cd ~
-git clone https://github.com/FilipHesse/ROS2_Tutorial.git --recurse-submodules
-```
-
-Build the packages inside ros1_ws:
-
-```bash
-cd ~/ROS2_Tutorial/ros1_ws
-source /opt/ros/<ros1_distro>/setup.bash
-catkin_make
-catkin_make_isolated --install
-```
-Build the packages inside ros1_ws:
-
-```bash
-cd ~/ROS2_Tutorial/ros2_ws
-source /opt/ros/<ros2_distro>/setup.bash
-colcon build --symlink-install
-```
-
-Build the ros1_bridge package inside bridge_ws:
-
-```bash
-cd ~/ROS2_Tutorial
-source /opt/ros/<ros1_distro>/setup.bash
-source /opt/ros/<ros2_distro>/setup.bash
-source ros1_ws/install_isolated/setup.bash
-source ros2_ws/install/local_setup.bash
-cd bridge_ws
-colcon build --symlink-install --packages-select ros1_bridge --cmake-force-configure
-```
-
-## Covered Subjects:
-
- 1. Introduction
- 2. ROS2 Basic Elements
- 3. ROS2 Application Management
- 4. Hands on: Create a basic Publisher and Subscriber
- 5. Building and compiling nodes
- 6. ROS Bridge
- 7. Real Time
- 8. SROS
-
-## Authors
-* Roberto Canale: roberto.canale.work@gmail.com
-* Filip Hesse: filip_hesse@yahoo.de
-* Justin Lee: leej1996@gmail.com
-* Daniel Nieto: danieto98@gmail.com
-* Steven Palma: imstevenpm.study@gmail.com
-* Josep Rueda: rueda_999@hotmail.com
+## Folders
+* Inside the folder [MATLAB Scripts](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/MATLAB%20Scripts), you can find a set of MATLAB Scripts that can be used to evaluate the data and Graphs from OpenSim. You can find aditional information regarding the Scripts inside the foler.
+* Inside the folder [controllers](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/controllers), you can find the controllers that we used to command the SCONE model. The file [hip_actuator_controller.lua](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/SCONE%20Software/controllers/hip_actuator_controller.lua) includes the particular algorithm that governs the orthosis actuators.
+* Inside the folder [measures](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/measures), you can find the goals and measurements that SCONES uses to give scores to each simulation.
+* Inside the folder [model](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/models), we can find the used SCONE model, based on the Geyer's model.
+* Inside the folder [parameters](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/parameters), we can find the files with the initial parameters for our simulations. These initial aparameters are the initial values of the variables we defined as "optimization variables", as long as their initial mean value and their standard deviation.
+* Inside the folder [results](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/results), we can find the results of the optimizations performed with SCONE. Each particular folder has several files displaying the behaviour of the model and they can be easily opened by simply double clicking them within the SCONE interface. They can evaluate any particular variable within the simulation using the OpenSim simulator plotting tool. Each simulation is heavy in matter of disk space, so as a matter of practicality, only the most relevant simulations have been uploaded.
+* Inside the folder [states](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/states), we can find  the files with the initial states for our simulations. These initial states include all the initial values of any varaible within the simulation, inlcuding any body position and orientation.

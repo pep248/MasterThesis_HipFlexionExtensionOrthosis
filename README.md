@@ -1,5 +1,5 @@
 # Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis
-This repo compiles all the files obtained in the realisation of the Master Thesis project "Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis".
+This repo compiles a set of usefull files obtained in the realisation of the Master Thesis project "Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis".
 
 ## Prerequistes
 This repo assumes the user is on a Windows system and has Scone Software installed on their machine.

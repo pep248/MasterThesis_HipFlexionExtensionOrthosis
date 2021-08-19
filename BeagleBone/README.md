@@ -1,5 +1,7 @@
 # BeagleBone
-Here you can find the software used to control the orthosis, some log results obtained during the experiments and a small pdf with instructions on how to upload it into the robot.
+Here you can find the software used to control the orthosis and some log results obtained during the experiments along with some Scripts to evaluate it.
+This file[walki_software_user_manual.pdf ](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/BeagleBone/walki_software_user_manual.pdf)
+contains instructions on how to upload controllers into the robot as long as the Software needed to do so.
 
 ## RemoteControl
 Inside the folder [RemoteControl](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/BeagleBone/RemoteControl) you can find the program used to connect to the orthosis during the experiments, and send and receive data from it. The file [RemoteControl.exe](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/BeagleBone/RemoteControl/RemoteControl.exe) is the executable file used to turn it on.

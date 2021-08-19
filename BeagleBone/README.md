@@ -1,6 +1,7 @@
-# Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis
-This repo compiles all the files obtained in the realisation of the Master Thesis project "Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis".
+# BeagleBone
+Here you can fin the software used to control the orthosis, some log results obtained during the experiments and a small pdf with instructions on how to upload it into the robot.
 
+Inside the folder "logs"(/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/BeagleBone/logs) you can find the results obtained during the experiments.
 ## Prerequistes
 This repo assumes the user is on a Windows system and has Scone Software installed on their machine.
 

@@ -1,7 +1,7 @@
 # BeagleBone
 Here you can fin the software used to control the orthosis, some log results obtained during the experiments and a small pdf with instructions on how to upload it into the robot.
 
-Inside the folder "logs"(/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/BeagleBone/logs) you can find the results obtained during the experiments.
+Inside the folder [logs](/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/BeagleBone/logs) you can find the results obtained during the experiments.
 ## Prerequistes
 This repo assumes the user is on a Windows system and has Scone Software installed on their machine.
 

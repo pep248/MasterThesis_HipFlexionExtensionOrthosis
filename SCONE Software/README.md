@@ -30,7 +30,7 @@ This can be achieved following the next steps:
 
 
 ## Folders
-* Inside the folder [MATLAB Scripts](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/MATLAB%20Scripts), you can find a set of MATLAB Scripts that can be used to evaluate the data and Graphs from OpenSim.
+* Inside the folder [MATLAB Scripts](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/MATLAB%20Scripts), you can find a set of MATLAB Scripts that can be used to evaluate the data and Graphs from OpenSim. You can find aditional information regarding the Scripts inside the foler.
 * Inside the folder [controllers](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/controllers), you can find the controllers that we used to command the SCONE model. The file [hip_actuator_controller.lua](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/SCONE%20Software/controllers/hip_actuator_controller.lua) includes the particular algorithm that governs the orthosis actuators.
 * Inside the folder [measures](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/measures), you can find the goals and measurements that SCONES uses to give scores to each simulation.
 * Inside the folder [model](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/tree/main/SCONE%20Software/models), we can find the used SCONE model, based on the Geyer's model.

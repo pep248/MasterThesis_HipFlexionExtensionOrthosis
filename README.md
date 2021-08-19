@@ -13,6 +13,15 @@ Specific folders include files which may require MATLAB, OpenSim Software, SCONE
 
 
 ## Author
-Josep Rueda Collell
+Josep Rueda Collell: rueda_999@hotmail.com
 
-rueda_999@hotmail.com
+## Evaluators
+Olivier Kermorgant: olivier.kermorgant@ec-nantes.fr
+Ali Reza Manzoori: ali.manzoori@epfl.ch
+
+## Supervisors:
+Yannick Aoustin: yannick.aoustin@univ-nantes.fr
+Maura Casadio: maura.casadio@unige.it
+Auke Jan Ijspeert: auke.ijspeert@epfl.ch
+Mohamed Bouri: mohamed.bouri@epfl.ch
+Andrea Di Russo: andrea.dirusso@epfl.ch

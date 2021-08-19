@@ -29,14 +29,6 @@ Specific folders include files which may require MATLAB, OpenSim Software, SCONE
 ## Universities
 
 <p align="center">
-<img src="![imatge](https://user-images.githubusercontent.com/38502977/130158219-a3e79bd9-39dc-4404-b943-976b77654125.png)">
-</p>
-
-<p align="center">
-<img src="https://www.ec-nantes.fr/medias/photo/logocn-rvb_1490650100592-jpg?ID_FICHE=109786">
-</p>
-
-<p align="center">
-<img src="https://id.unige.it/assets/img/logo-colore.png">
+<img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/Logos.png">
 </p>
 

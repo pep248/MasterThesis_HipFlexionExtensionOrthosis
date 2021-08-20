@@ -18,7 +18,7 @@ This can be achieved following the next steps:
 <img src="https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/SCONE%20Software/scone_tools.png">
 </p>
 
-4) In the "SCONE Scenarios" field, set the "Scone Sotware" directory of our recently downloaded repository:
+4) In the "SCONE Scenarios" field, set the "Scone Software" directory of our recently downloaded repository:
 "...\MasterThesis_HipFlexionExtensionOrthosis\SCONE Software".
 
 5) In the "Optimization results" field, set the "Scone Sotware\results" directory of our recently downloaded repository:

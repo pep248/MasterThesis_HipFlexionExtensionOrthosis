@@ -1,7 +1,7 @@
 # SCONE Software
 This folder realates to the files regarding the simulator and the tests performed with it. It includes a folder with simulation results along with some MATLAB Scripts to evaluate them.  
 
-## Prerequistes
+## Prerequisites
 This repo assumes the user is on a Windows system and has OpenSim Software and Scone Software installed on his/her machine.
 
 To install OpenSim Software follow the instructions here: [OpenSim](https://simtk.org/frs/index.php?group_id=91).

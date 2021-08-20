@@ -1,7 +1,7 @@
-# Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis
-This repo compiles a set of usefull files used during the realisation of the Master Thesis project "Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis", as long as the [Final Master Thesis Report](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/JosepRuedaCollell_MasterThesis.pdf).
+# Simulation and implementation of a muscular based controllers to asist gait using a hip flexion-extension hip orthosis
+This repo compiles a set of useful files used during the realisation of the Master Thesis project "Simulation and implementation of a muscular based controllers to assist gait using a hip flexion-extension hip orthosis", as long as the [Final Master Thesis Report](https://github.com/pep248/MasterThesis_HipFlexionExtensionOrthosis/blob/main/JosepRuedaCollell_MasterThesis.pdf).
 
-## Prerequistes
+## Prerequisites
 This repo assumes the user is on a Windows system.
 Specific folders include files which may require MATLAB, OpenSim Software, SCONE Software and QtCreator. Each folder includes instructions on how to install these mentioned programs.
 
